@@ -1,0 +1,9 @@
+/.idea
+target/
+allure-results/
+cookies.yaml
+autoInterface.iml
+.gradle
+src/main/.DS_Store
+src/main/resources/.DS_Store
+log/*
