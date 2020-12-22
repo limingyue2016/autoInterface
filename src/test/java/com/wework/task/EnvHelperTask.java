@@ -10,7 +10,7 @@ public class EnvHelperTask {
     public static void clearDepartmentTask(String departmentId, String accessToken) {
         ArrayList<Integer> departmentids = departInit.listDepartment(departmentId, accessToken).path("department.id");
         for (int departmentid : departmentids) {
-            if (departmentid == 1) {
+            if (departmentid == 4) {
                 continue;
             }
             departInit.deleteDepartment(departmentid + "", accessToken);
