@@ -22,8 +22,8 @@ public class Department extends BaseTest {
     @DisplayName("创建部门")
     @ParameterizedTest
     @CsvFileSource(resources = "/data/createDepartment.csv", numLinesToSkip = 1)
-    void createDepartment(String creatName, String returncode) {
-        Response response = departInit.createDepartment(creatName, accessToken);
+    void createDepartment(String createName, String returncode) {
+        Response response = departInit.createDepartment(createName, accessToken);
         assertEquals(returncode, response.path("errcode").toString());
     }
 

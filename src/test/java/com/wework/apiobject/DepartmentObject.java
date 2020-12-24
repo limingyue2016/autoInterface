@@ -53,12 +53,12 @@ public class DepartmentObject extends BasePO {
 
     public static Response deleteDepartment(String departmentId, String accessToken) {
         Response response = given()
-                .contentType("application/json")
                 .param("access_token", accessToken)
                 .param("id", departmentId)
                 .get("https://qyapi.weixin.qq.com/cgi-bin/department/delete")
                 .then()
-                .extract().response();
+                .extract()
+                .response();
         log.i("删除部门成功");
         return response;
     }
